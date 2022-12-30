@@ -1,0 +1,4 @@
+First run either ibm_model_1.py or ibm_model_2.py with optional flag --epochs where if you put a value next to the flag it will run
+the models that number of epochs for example "python3 ibm_model_1.py --epochs 10" will train ibm model 1 for 10 epochs and then its t parameters will be saved as a pickle file of t_params_ibm1_iteration{i}.pickle to get the t_params dictionary at every epoch trained (i goes from 1 to 10).
+
+Afterwards run the corresponding models obtain_alignments_ibm1.py or obtain_alignments_ibm2.py to obtain corresponding dev_ibm1_iteration{i}.out files that will be ran through the evaluation script to obtain the precision, recall, and f1 scores. Optionally obtain_alignments_ibm1.py (or ...ibm2.py) has an optional flag --iterations where if you only wanted the first 3 dev.out iterations files then you would call "python3 obtain_alignments_ibm1.py --iterations 3"
